@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include <stdlib.h>
 #include<time.h>
 #include"murmur.h"
 
@@ -28,8 +27,8 @@ void genRando(int m)
         p=clock();
         sprintf(key,"%d",p);
         for(j=0;key[j]!='\0';j++);
-        q=q^p;
         d=murmur2(key,j,q);
+        q=d;
         d=d&1;
         binary[i]=d;
         i++;
@@ -54,10 +53,7 @@ void genRando(int m)
 
 int main()
 {
-    int m=10000000;
-    
+    int m=10000000; 
     genRando(m);
-    
-    //fclose(fp2);
     return 0;
 }
