@@ -18,15 +18,15 @@ unsigned long int genRando()
 		p=clock();
 		sprintf(key,"%d",p);
 		for(j=0;key[j]!='\0';j++);
-		q=q^p;
 		d=murmur2(key,j,q);
+		q=d;
 		d=d&1;
 		binary[i]=d;
 		rand+=d*(k<<i);
 		i++;
 		
 	}
-	/*for(i=0;i<32;i++)
+	/*for(i=0;i<64;i++)
 		printf("%d",binary[i]);*/
 	return rand;
 }
