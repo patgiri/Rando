@@ -1,4 +1,4 @@
-# Rando: A random number generator
+# Rando: A true random number generator
 
 ## Compilation
 ### Compile to generate 32-bit random number
