@@ -1,16 +1,14 @@
 #include <stdio.h>
-//#include <stdlib.h>
 #include <time.h>
 #include "murmur.h"
-#define size 32
 
 unsigned int genRando()
 {
 	int i=0,d;
 	int *binary=(int *)malloc(32*sizeof(int));
-	char key[1024],c;
+	char key[1024];
 	int m=32;
-	int p,q,j,k=1;
+	int p,q;
 	unsigned int rand=0;
 	q=clock()^15485867;
 	while(i<m)
@@ -18,11 +16,11 @@ unsigned int genRando()
 		p=clock();
 		sprintf(key,"%d",p);
 		for(j=0;key[j]!='\0';j++);
-		q=q^p;
 		d=murmur2(key,j,q);
+		q=d;
 		d=d&1;
 		binary[i]=d;
-		rand+=d*(k<<i);
+		rand+=d*(1<<i);
 		i++;
 		
 	}
@@ -32,11 +30,7 @@ unsigned int genRando()
 }
 
 int main()
-{
-    //int m=128;
-    
+{ 
     printf("\nRandom number %u\n",genRando());
-    
-    //fclose(fp2);
     return 0;
 }
