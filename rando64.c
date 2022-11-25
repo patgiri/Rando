@@ -2,7 +2,7 @@
 //#include <stdlib.h>
 #include <time.h>
 #include "murmur.h"
-#define size 32
+
 
 unsigned long int genRando()
 {
@@ -10,7 +10,7 @@ unsigned long int genRando()
 	int *binary=(int *)malloc(64*sizeof(int));
 	char key[1024],c;
 	int m=64;
-	int p,q,j,k=1;
+	int p,q;
 	unsigned long int rand=0;
 	q=clock()^15485867;
 	while(i<m)
@@ -22,7 +22,7 @@ unsigned long int genRando()
 		q=d;
 		d=d&1;
 		binary[i]=d;
-		rand+=d*(k<<i);
+		rand+=d*(1L<<i);
 		i++;
 		
 	}
@@ -33,10 +33,6 @@ unsigned long int genRando()
 
 int main()
 {
-    //int m=128;
-    
     printf("\nRandom number %lu\n",genRando());
-    
-    //fclose(fp2);
     return 0;
 }
