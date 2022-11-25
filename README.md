@@ -8,7 +8,8 @@
 `$./rando`
 
 ## Use as the function #incldue "rando.h"
-`unsinged int random_number=genRando();`
+`unsinged int random_number=genRando();`\
+The genRando() function returns unsigned int value.
 
 ## Publication and you may cite as follows-
 
