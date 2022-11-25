@@ -38,8 +38,8 @@ The genRando() function returns unsigned long int value.
 
 `#incldue "rando_large.h"`\
 `int bits=10000000;`\
-`unsinged long int random_number=genRando(bits);`\
-The genRando() function returns unsigned long int value.
+`genRando(bits);`\
+The genRando() function does not return any value. Instead, it writes the bits into a file, rando.txt
 
 
 ## You may cite as follows-
