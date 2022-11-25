@@ -42,6 +42,9 @@ The genRando() function returns unsigned long int value.
 The genRando() function does not return any value. Instead, it writes the bits into a file, rando.txt
 
 
+## Published paper link
+You can read the paper from IEEE Xplore (https://ieeexplore.ieee.org/document/9724379)
+
 ## You may cite as follows-
 
 ``` 
