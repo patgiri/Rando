@@ -19,7 +19,7 @@ unsigned long int genRando()
 		d=q;
 		d=d&1;
 		binary[i]=d;
-		rand+=d*(1UL<<i);
+		rand+=(unsigned long int)d*(1UL<<i);
 		i++;
 		
 	}
