@@ -35,7 +35,7 @@ void genRando(int m)
     j=0;
     for(i=0;i<m;i++)                                //Writing the created binary to file.
     {
-        if(count==63)
+        if(count==64)
         {
             fprintf(fp,"\n");
             count=0;
