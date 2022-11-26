@@ -32,6 +32,10 @@ unsigned long int genRando()
 
 int main()
 {
-    printf("\nRandom number %lu\n",genRando());
+    int i,n=1000;
+    printf("Generating random numbers...\n");
+    for(i=0;i<n;i++)
+    	printf("%lu\t",genRando());
+    printf("\nDone!\n");
     return 0;
 }
